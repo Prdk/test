@@ -3,19 +3,40 @@
 <html>
     <head>
         <title>TODO supply a title</title>
+        <script src="/js/jquery-3.2.0.min.js"></script>
+        <script src="/js/main.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="/form.php" method="GET"> 
-            <input type="text" placeholder="жжжжжж" name="jjjjj">
-            <input type="submit">
-            
-        </form>
+        <table border="0">
+            <tr>
+                <td><input type="number" placeholder="Число1" id="n_1"></td>
+                <td><input type="text" placeholder="Число2" id="n_2"></td>
+                <td><input type="text" placeholder="результат" id="result"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" class='action_button' value="+" id="plus" onclick="setProc('plus');"></td>
+                <td></td>
+                <td><input type="button"  class='action_button' value="-" id="minus" onclick="setProc('minus');"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button"  class='action_button' value="*" id="multiply"></td>
+                <td></td>
+                <td><input type="button"  class='action_button' value="/" id="divide"></td>
+            </tr>
+            <tr align="center">
+                <td></td>
+                <td><input type="button" id="send" value="send" onclick=" getResult();"></td>
+                <td></td>
+            </tr>
+
+
+        </table>
+        <span id='errors'style='color: red'></span>
+        
+        <input type="hidden" id="last" value='0'>
     </body>
+
+
 </html>
-
-
-<?php
-
-?>
