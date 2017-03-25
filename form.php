@@ -6,6 +6,4 @@
  * and open the template in the editor.
  */
 
-for($i = 1;$i <= 100;$i++){
-    echo "$i<br>";
-}
+var_dump($_REQUEST);
