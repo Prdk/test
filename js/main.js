@@ -37,6 +37,10 @@ function getResult() {
         var c = a - b;
         $("#result").val(c);
     }
+    if (action == "multiply") {
+        var c = a * b;
+        $("#result").val(c);
+    }
 }
 
 function setProc(type) {
