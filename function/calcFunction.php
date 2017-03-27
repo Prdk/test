@@ -1,10 +1,7 @@
 <?php
 
 print_r($_POST);
-$result = $rez;
-echo $rez;
-echo "<br/>";
-echo $result;
+
 
 if (!empty($_POST['n_1'])) {
     if (!empty($_POST['n_2'])) {
@@ -37,5 +34,10 @@ function operation($operations){
 
 function sum($n_1,$n_2){
     $rez = $n_1 + $n_2;
-    return $rez;
+    //return $rez;
+    echo $rez;
 }
+
+echo $rez;
+echo "<br/>";
+echo $result;

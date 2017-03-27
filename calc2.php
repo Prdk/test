@@ -27,7 +27,7 @@ require_once 'function/calcFunction.php';
             </select>
             <input type="text" placeholder="Введите число2" 
                    name="n_2" title="Число2" value="<?php echo $n_2 ?>"> = 
-            <input type="text" name="result" readonly="" value="<?php echo $rez ?>">
+            <input type="text" name="result" readonly="" value="<?php $rez ?>">
             <p>
                 <input type="submit" name="otpr" value="ПОСЧИТАТЬ">
                 <input type="reset">
