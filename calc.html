@@ -17,14 +17,14 @@
                 <td><input type="text" placeholder="результат" id="result"></td>
             </tr>
             <tr align="center">
-                <td><input type="button" class='action_button' value="+" id="plus" onclick="setProc('plus');"></td>
+                <td><input type="button" class='action_button' value="+" id="plus"></td>
                 <td></td>
                 <td><input type="button"  class='action_button' value="-" id="minus" onclick="setProc('minus');"></td>
             </tr>
             <tr align="center">
-                <td><input type="button"  class='action_button' value="*" id="multiply"></td>
+                <td><input type="button"  class='action_button' value="*" id="multiply" onclick="setProc('multiply');"></td>
                 <td></td>
-                <td><input type="button"  class='action_button' value="/" id="divide"></td>
+                <td><input type="button"  class='action_button' value="/" id="divide" onclick="setProc('divide');"></td>
             </tr>
             <tr align="center">
                 <td></td>
@@ -38,6 +38,13 @@
         <span id='errors' style='color: red'></span>
 
         <input type="hidden" id="last" value='0'>
+        <br/>
+        <br/>
+        <input type="button" id="myButton" value="нажми меня">
+        
+        
+        
+        
     </body>
 
 

@@ -3,6 +3,30 @@ $(document).ready(function () {
 
 });
 
+$(onClick);
+
+function onClick(type) {
+
+    //$('#myButton').bind('click', sayHello);
+    $('#plus').bind('click', setProc(type));
+}
+
+
+
+//function sayHello() {
+//    document.write("Всем - привет!");
+//}
+
+function setProc(type) {
+    $("#last").val(type);
+    $(".action_button").each(function () {
+        $(this).css('background-color', 'green');
+    });
+    $("#" + type).css('background-color', 'red');
+
+}
+
+
 
 function getResult() {
 
@@ -43,11 +67,3 @@ function getResult() {
     }
 }
 
-function setProc(type) {
-    $("#last").val(type);
-    $(".action_button").each(function () {
-        $(this).css('background-color', 'green');
-    });
-    $("#" + type).css('background-color', 'red');
-
-}
