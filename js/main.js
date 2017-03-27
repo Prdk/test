@@ -13,6 +13,7 @@ function onClick(type) {
 
 
 
+
 //function sayHello() {
 //    document.write("Всем - привет!");
 //}
