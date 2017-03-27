@@ -1,7 +1,5 @@
 <?php
 
-
-//print_r($POST);
 require_once 'function/calcFunction.php';
 
 ?>
@@ -16,10 +14,10 @@ require_once 'function/calcFunction.php';
     <body>
         <h1 align="center">Калькулятор2</h1>
         
-        <form action="calc2.php" method="POST" name="muform">
+        <form action="calc2.php" method="POST" name="muform" align="center">
             
-            <label>Число1:<input type="text" placeholder="Введите число1" 
-                                 name="n_1" title="Число1"></label>
+            <input type="text" placeholder="Введите число1" 
+                   name="n_1" title="Число1" value="<?php echo $n_1 ?>">
             <select name="operations">
                 <option>+</option>
                 <option>-</option>
@@ -27,9 +25,14 @@ require_once 'function/calcFunction.php';
                 <option>/</option>
                 <option></option>
             </select>
-            <label>Число2:<input type="text" placeholder="Введите число2" 
-                                 name="n_2" title="Число2"></label>
-            <p><input type="submit" name="otpr"></p>
+            <input type="text" placeholder="Введите число2" 
+                   name="n_2" title="Число2" value="<?php echo $n_2 ?>"> = 
+            <input type="text" name="result" readonly="" value="<?php echo $rez ?>">
+            <p>
+                <input type="submit" name="otpr" value="ПОСЧИТАТЬ">
+                <input type="reset">
+            </p>
+            
             
             
         </form>
