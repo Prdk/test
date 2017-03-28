@@ -1,17 +1,21 @@
 $(document).ready(function () {
-
-
+    $('#plus').bind('click', setProc('plus'));
+    $('#minus').bind('click', setProc('minus'));
+    $('#multiply').bind('click', setProc('multiply'));
+    $('#divide').bind('click', setProc('divide'));
+    $('#send').bind('click', getResult);
 });
+
+
 
 $(onClick);
 
-function onClick(type) {
+function onClick() {
 
     //$('#myButton').bind('click', sayHello);
-    $('#plus').bind('click', setProc(type));
+
+
 }
-
-
 
 
 //function sayHello() {
@@ -20,6 +24,7 @@ function onClick(type) {
 
 function setProc(type) {
     $("#last").val(type);
+
     $(".action_button").each(function () {
         $(this).css('background-color', 'green');
     });
@@ -32,6 +37,7 @@ function setProc(type) {
 function getResult() {
 
     var action = $("#last").val();
+
     var a = $("#n_1").val() * 1;
     var b = $("#n_2").val() * 1;
     $("#errors").html('');
@@ -64,6 +70,10 @@ function getResult() {
     }
     if (action == "multiply") {
         var c = a * b;
+        $("#result").val(c);
+    }
+    if (action == "divide") {
+        var c = a / b;
         $("#result").val(c);
     }
 }
