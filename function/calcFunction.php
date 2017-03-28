@@ -1,6 +1,6 @@
 <?php
 
-print_r($_POST);
+//print_r($_POST);
 
 //echo $rez;
 
@@ -10,20 +10,19 @@ if (isset($_POST['n_1'])) {
         $n_1 = $_POST['n_1'];
         $n_2 = $_POST['n_2'];
         $operations = $_POST['operations'];
-        //global $rez;
+        global $rez;
 
         if (is_numeric($n_1) && is_numeric($n_2)) {
             switch ($operations) {
                 case '+':
-                    sum($n_1, $n_2);
-                    //echo $rez;
-                    //return $rez;
+                    $result = sum($n_1, $n_2);
+                    
                     break;
                 case '-':
-                    raz($n_1, $n_2);
+                    $result = raz($n_1, $n_2);
                     break;
                 case '*':
-                    mult($n_1, $n_2);
+                    $result = mult($n_1, $n_2);
                     break;
                 case '/':
                     divide($n_1, $n_2);
@@ -41,20 +40,20 @@ if (isset($_POST['n_1'])) {
 
 function sum($n_1, $n_2) {
     $rez = $n_1 + $n_2;
-
-    //return $rez;
-    echo $rez;
+    return $rez;
+    
+   // echo $rez;
 }
 
 function raz($n_1, $n_2) {
     $rez = $n_1 - $n_2;
-    //return $rez;
-    echo $rez;
+    return $rez;
+    
 }
 
 function mult($n_1, $n_2) {
     $rez = $n_1 * $n_2;
-    echo $rez;
+    return $rez;
 }
 
 function divide($n_1, $n_2) {
@@ -62,9 +61,9 @@ function divide($n_1, $n_2) {
         echo "деление на ноль невазможно";
     } else {
         $rez = $n_1 / $n_2;
-        echo $rez;
+        return $rez;
     }
 }
 
-//$rez = 5555;
-//echo $rez;
+
+
