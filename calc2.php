@@ -2,8 +2,7 @@
 
 require_once 'function/calcFunction.php';
 
-//$result = 4444;
-global $rez;
+
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +28,11 @@ global $rez;
             </select>
             <input type="text" placeholder="Введите число2" 
                    name="n_2" title="Число2" value="<?php //echo $n_2; ?>"> = 
-            <input type="text" name="result" readonly="" value="<?php  echo $result; ?>">
+            <input type="text" name="result" readonly="" 
+                   value="<?php  echo " $result "; ?>">
             <p>
                 <input type="submit" name="otpr" value="ПОСЧИТАТЬ">
-                <input type="button" name="erase" value="СТЕРЕТЬ">
+                <input type="button" name="erase" value="ОЧИСТИТЬ">
             </p>
             
             

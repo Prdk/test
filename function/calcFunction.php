@@ -2,40 +2,50 @@
 
 //print_r($_POST);
 
-//echo $rez;
+
 
 if (isset($_POST['n_1'])) {
     if (isset($_POST['n_2'])) {
         
         $n_1 = $_POST['n_1'];
-        $n_2 = $_POST['n_2'];
         $operations = $_POST['operations'];
-        global $rez;
+        $n_2 = $_POST['n_2'];
+        
+        
 
         if (is_numeric($n_1) && is_numeric($n_2)) {
             switch ($operations) {
                 case '+':
-                    $result = sum($n_1, $n_2);
+                    $rez = sum($n_1, $n_2);
+                    $result = answer($n_1,$operations,$n_2,$rez);
                     
                     break;
                 case '-':
-                    $result = raz($n_1, $n_2);
+                    $rez = raz($n_1, $n_2);
+                    $result = answer($n_1,$operations,$n_2,$rez);
                     break;
                 case '*':
-                    $result = mult($n_1, $n_2);
+                    $rez = mult($n_1, $n_2);
+                    $result = answer($n_1,$operations,$n_2,$rez);
                     break;
                 case '/':
-                    divide($n_1, $n_2);
+                    $rez = divide($n_1, $n_2);
+                    $result = answer($n_1,$operations,$n_2,$rez);
                     break;
             }
         } else {
-            echo "Ведены не числа";
+            $result = "Ведены не числа";
         }
     } else {
-        echo "Введите число 2";
+        $result = "Введите число 2";
     }
 } else {
-    echo "Введите число 1";
+    $result = "Введите число 1";
+}
+
+function answer($n_1,$operations,$n_2,$rez){
+    $result = " $n_1 $operations $n_2 = $rez ";
+    return $result;
 }
 
 function sum($n_1, $n_2) {
@@ -47,6 +57,7 @@ function sum($n_1, $n_2) {
 
 function raz($n_1, $n_2) {
     $rez = $n_1 - $n_2;
+    
     return $rez;
     
 }
@@ -58,11 +69,12 @@ function mult($n_1, $n_2) {
 
 function divide($n_1, $n_2) {
     if ($n_2 == 0) {
-        echo "деление на ноль невазможно";
+        $rez = "деление на ноль невазможно";
     } else {
         $rez = $n_1 / $n_2;
         return $rez;
     }
+    
 }
 
 
