@@ -1,9 +1,14 @@
 $(document).ready(function () {
-    $('#plus').bind('click', setProc('plus'));
-    $('#minus').bind('click', setProc('minus'));
-    $('#multiply').bind('click', setProc('multiply'));
-    $('#divide').bind('click', setProc('divide'));
-    $('#send').bind('click', getResult);
+//    $('#plus').bind('click', setProc('plus'));
+//    $('#minus').bind('click', setProc('minus'));
+//    $('#multiply').bind('click', setProc('multiply'));
+//    $('#divide').bind('click', setProc('divide'));
+//    $('#send').bind('click', getResult);
+$("#main_table").on("click", "#plus", function (){
+    setProc('plus');
+    
+});
+
 });
 
 
