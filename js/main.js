@@ -6,6 +6,7 @@ $(document).ready(function () {
 //    $('#send').bind('click', getResult);
 $("#main_table").on("click", "#plus", function (){
     setProc('plus');
+    setProc('minus');
     
 });
 
