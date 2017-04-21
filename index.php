@@ -1,5 +1,6 @@
 <?php
 
+echo PHP_VERSION;
 ?>
 
 <!DOCTYPE html>
