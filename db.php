@@ -31,5 +31,7 @@ require_once 'function/query_processing.php';
 
         </fieldset>
 
+        
+        <a href="index.php">Вернуться на главную</a>
     </body>
 </html>
