@@ -13,26 +13,28 @@ $password = 'kdjgyvx5';
 $conn = new PDO("mysql:host=$host;dbname=$db_name", $user, $password);
 
 
-if($conn){
-    $musql_select = "SELECT * FROM users WHERE 1";
-    $res = $conn->query($musql_select)->fetchALL(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    echo var_dump($res);
-    echo "</pre>";
-}else{
-    echo "Нет соединения";
+
+echo Select($conn);
+
+//выборка
+function Select($conn){
+  $sqlSelect = "SELECT * FROM users WHERE 1";
+  $select = $conn -> query($sqlSelect);
+  while($select2 = $select -> fetch(PDO::FETCH_ASSOC)){
+      
+      echo $select2['name']."<br/>";
+      echo $select2['email']."<br/>";
+  }
+  //echo var_dump($select2);
+  
 }
 
-
-function Select(){
+//удаление записи
+function Delete(){       
     
 }
 
-function Delete(){
-    
-}
-
-
-function AddNote(){
+//добавление записи
+function AddNote(){     
     
 }
