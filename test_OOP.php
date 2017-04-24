@@ -1,36 +1,39 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-class Test1{ 
+class Test {
+
     public $name;
     public $age;
+
+    public function showName() {
+        echo $this -> name. "Test <br/>";
+    }
+
+    public function getName() {
+        $this->showName();
+    }
+
+}
+
+class Test2 extends Test{
+    public $name2;
+    public $age2;
     
-    public function wiew(){
-        echo $this -> name."Test1, 2 <br/>";
+    public function showName2(){
+        echo $this->name. " Test2 <br/> ";
+        Test::getName();
     }
     
 }
 
-class Test2{
-    public $name;
-    public $age;
-    
-    public function wiew(){
-        echo $this -> name. "Test2, 2 <br/>";
-        echo Test1() -> name;
-    }
-}
-
-$test = new Test1();
-$test -> name = 'lexa';
-echo  $test -> name."Test1, 1 <br/>";
-$test ->wiew();
+$test = new Test();
+$test->name = 'user1';
+$test ->getName();
 
 $test2 = new Test2();
-$test2 -> name = 'mixa';
-echo $test2 -> name. "Test2, 1 <br/>";
-$test2 ->wiew();
-
+$test2 -> name = 'user2';
+$test2 ->showName2();
 ?>
 
 <!DOCTYPE html>
@@ -41,10 +44,10 @@ $test2 ->wiew();
         <meta charset="UTF-8">
     </head>
     <body>
-        
-        
+
+
         <?php
-        for($i = 0; $i < 10; $i++){
+        for ($i = 0; $i < 10; $i++) {
             echo "<br/>";
         }
         ?>
