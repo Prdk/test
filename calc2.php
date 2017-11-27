@@ -48,7 +48,7 @@ require_once 'function/calcFunction.php';
         <br/>
         <div align="center">
             <button>
-                <a href="index.php">Вернутся на главную</a>
+                <a href="index.php" align="center">Вернутся на главную</a>
             </button>
         </div>
         
