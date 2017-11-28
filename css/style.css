@@ -8,10 +8,10 @@ and open the template in the editor.
     Author     : лёха
 */
 
-#nazad{
-    /*position: absolute;*/
+
+.d{
+    position: absolute;
     text-align: center;
-    color: red;
-    
+    color: red;  
     
 }
