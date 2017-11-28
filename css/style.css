@@ -9,7 +9,9 @@ and open the template in the editor.
 */
 
 #nazad{
+    /*position: absolute;*/
     text-align: center;
     color: red;
-    text-align: botom;
+    
+    
 }
