@@ -13,18 +13,20 @@ echo "</pre>";
 
 
 echo "<table border='2'>";
-
-foreach ($a as $k => $v){
+echo "<tr>";
+foreach($a as $k => $v){
     echo "<tr>";
     echo "<td>".$k."</td>";
-    echo "<td>".$v."</td>";
-    foreach ($v as $k1 => $v1){
+    
+    
+    foreach($v as $k1 => $v1){
+        
         echo "<td>".$v1."</td>";
+        
     }
-    echo "</tr>";
-    
+   echo "</tr>";
 }
-    
+
 
 
 echo "</table>";
@@ -46,7 +48,7 @@ echo "<br>";
         <p><h3>бред</h3></p>
     
     
-    <a href="index.php" title="Вернутся на главную" id="nazad" class="d"><h1>Вернутся на главную</h1></a>
+    <a href="index.php" title="Вернутся на главную" id="nazad" class="nazad"><h1>Вернутся на главную</h1></a>
     </body>
     
 </html>
