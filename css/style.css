@@ -12,6 +12,12 @@ and open the template in the editor.
 #nazad{
     /*position: absolute;*/
     text-align: center;
-    color: red;  
+    color: red;
+    top: 50%;
+    bottom: 50%;
     
+}
+
+#sybmit{
+    border-radius: 50%;
 }

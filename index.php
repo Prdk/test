@@ -19,7 +19,7 @@ echo PHP_VERSION;
             <li><a href="calc2.php" title="Калькулятор2">Калькулятор2</a></li>
             <li><a href="db.php" title="Работа с БД">Работа с БД</a></li>
             <li><a href="test_OOP.php" title="тренировка ООП">тренировка ООП</a></li>
-            <li><a href="newTest.php" title="учим php">учим php</a></li>
+            <li><a href="newTestHtml.html" title="учим php">учим php</a></li>
             
         </ol>
         
