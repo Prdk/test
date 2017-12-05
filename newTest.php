@@ -30,9 +30,14 @@ foreach($a as $k => $v){
 
 
 echo "</table>";
+
+if(empty($_POST["name"] && $_POST["password"])){
+    require 'newTestHtml.html';
+}else{
 echo "<pre>";
 print_r($_POST);
 echo "</pre>";
+}
 
 ?>
 
