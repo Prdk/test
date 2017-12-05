@@ -30,7 +30,9 @@ foreach($a as $k => $v){
 
 
 echo "</table>";
-
+echo "<pre>";
+echo "print_r[POST]";
+echo "</pre>";
 echo "<br>";
 echo "<br>";
 ?>
@@ -40,15 +42,24 @@ echo "<br>";
 <html>
     <head>
         <meta charset="utf-8">
+        <title>учеба</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <br>
         <br>
-        <p><h3>бред</h3></p>
+        
+        <form action="newTest.php" method="POST">
+            <p><label>Введите имя: <input tupe="text" name="name" title="введите имя"></label></p>
+            <p><label>Введите пароль: <input tupe="text" name="password" title="Введите пароль"></label></P>
+            <p><input tupe="submit" value="нажми меня"></P>
+        </form>
+        
     
     
-    <a href="index.php" title="Вернутся на главную" id="nazad" class="nazad"><h1>Вернутся на главную</h1></a>
+    
+    
+    <a href="index.php" title="Вернутся на главную" id="nazad"><h1>Вернутся на главную</h1></a>
     </body>
     
 </html>
